@@ -23,7 +23,7 @@ public class GreetingRouter {
 
                 .route(route_hello, greetingHandler::hello)
                 .andRoute(
-                        GET("/"),
+                        GET("/main"),
                         ServerRequest -> {
                             return ServerResponse
                                     .ok()
@@ -32,6 +32,8 @@ public class GreetingRouter {
                         }
                 )
                 .andRoute(
-                        GET("/user"), greetingHandler::user);
+                        GET("/user"), greetingHandler::user)
+                .andRoute(
+                        GET("/"), greetingHandler::user);
     }
 }

@@ -3,7 +3,6 @@ package com.example.WebFlux_demo_project_DataBaseConnection.controller;
 
 import com.example.WebFlux_demo_project_DataBaseConnection.domain.Message;
 import com.example.WebFlux_demo_project_DataBaseConnection.service.MessageService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -14,7 +13,6 @@ public class MainController {
 
     private final MessageService messageService;
 
-    @Autowired
     public MainController(MessageService messageService) {
         this.messageService = messageService;
     }
