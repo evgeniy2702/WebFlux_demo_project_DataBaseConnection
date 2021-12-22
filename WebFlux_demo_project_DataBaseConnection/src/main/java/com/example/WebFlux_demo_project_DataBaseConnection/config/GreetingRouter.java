@@ -34,6 +34,6 @@ public class GreetingRouter {
                 .andRoute(
                         GET("/user"), greetingHandler::user)
                 .andRoute(
-                        GET("/"), greetingHandler::user);
+                        GET("/"), greetingHandler::user );
     }
 }

@@ -48,7 +48,7 @@ public class GreetingHandler {
 
             String user = serverRequest.queryParam("user")
                     .orElse("Nobody");
-            return ServerResponse
+                return ServerResponse
                     .ok()
                     .render("index", Map.of("user" ,user));
         }
